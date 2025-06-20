@@ -39,7 +39,6 @@ const eventSchema=new Schema({
   timestamps: true
 });
 
-// Compound indexes for better query performance
 eventSchema.index({ eventName: 1, timestamp: -1 });
 eventSchema.index({ timestamp: -1, eventName: 1 });
 eventSchema.index({ userId: 1, timestamp: -1 });
